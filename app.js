@@ -24,23 +24,25 @@ const trainElement = document.getElementById("train")
     //recuperiamo la select     
      const sconto = scontoElement.value
      let prezzo = 0.21
-     let prezzoBgilietto = km * prezzo
+     let perzzoBiglietto = km * prezzo 
+     
+     
 
      if(sconto === "Minorenne") {
 
-         prezzoBgilietto = (prezzoBgilietto * 20) / 100
+         perzzoBiglietto = (perzzoBiglietto * 20) / 100
      }
 
      
      else if  ( sconto === "Senior") 
      {
-        prezzoBgilietto = (prezzoBgilietto * 40) / 100
+        perzzoBiglietto = (perzzoBiglietto * 40) / 100
 
      }
 
      else(sconto === "")
       {
-        prezzoBgilietto
+        perzzoBiglietto
 
      }
      
@@ -50,7 +52,9 @@ const trainElement = document.getElementById("train")
 
 
      
-     console.log(prezzoBgilietto)
-     ticketElement.innerHTML = prezzoBgilietto + "£"
+     console.log(perzzoBiglietto)
+     
+     ticketElement.innerHTML = perzzoBiglietto + "£"
+    
 
     })
