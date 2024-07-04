@@ -25,18 +25,19 @@ const trainElement = document.getElementById("train")
      const sconto = scontoElement.value
      let prezzo = 0.21
      let perzzoBiglietto = km * prezzo 
+    
      
      
+        //condizioni sconto
+     if(sconto === "Minorenne" && age <= 18 ) {
 
-     if(sconto === "Minorenne") {
-
-         perzzoBiglietto = (perzzoBiglietto * 20) / 100
+         perzzoBiglietto = (perzzoBiglietto * 0.2)
      }
 
      
-     else if  ( sconto === "Senior") 
+     else if  ( sconto === "Senior" && age >= 65 ) 
      {
-        perzzoBiglietto = (perzzoBiglietto * 40) / 100
+        perzzoBiglietto = (perzzoBiglietto * 0.4)
 
      }
 
@@ -46,15 +47,16 @@ const trainElement = document.getElementById("train")
 
      }
      
-
-
-
-
-
      
      console.log(perzzoBiglietto)
      
-     ticketElement.innerHTML = perzzoBiglietto + "£"
-    
+     ticketElement.innerHTML = perzzoBiglietto + "€"
+
+     
+   
 
     })
+
+    
+
+   
