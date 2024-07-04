@@ -28,13 +28,13 @@ trainElement.addEventListener('submit', function (event)
     let perzzoBiglietto = km * prezzo  
         
     //condizioni sconto
-    if(sconto === "Minorenne" && age <= 18 ) 
+    if(sconto === "Minorenne"  ) 
     {
-        perzzoBiglietto = perzzoBiglietto * 0.2 // sconto 20%
+        perzzoBiglietto = perzzoBiglietto * (1 - 0.2 ) // sconto 20%
     }
-    else if  ( sconto === "Senior" && age >= 65 ) 
+    else if  ( sconto === "Senior"  ) 
     {
-        perzzoBiglietto = perzzoBiglietto * 0.4 // sconto 40 %
+        perzzoBiglietto = perzzoBiglietto - perzzoBiglietto * 0.4 // sconto 40 %
     }
     //arrotondiamo ai ultimi 2 decimali
     perzzoBiglietto = Math.round(perzzoBiglietto * 100 ) /100
